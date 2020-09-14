@@ -27,7 +27,7 @@ ENV CLIENT_SAMPLE_PATH=/tmp/git/owt-docker/owt-client-javascript-4.3/dist/sample
 
 # @see https://blog.piasy.com/2019/04/14/OWT-Server-Quick-Start/index.html
 COPY owt-server-4.3.tar.gz /tmp/git/owt-docker 
-RUN cd /tmp/git/owt-docker && tar xfz owt-server-4.3.tar.gz -C owt-server-4.3
+RUN cd /tmp/git/owt-docker && tar xfz owt-server-4.3.tar.gz
 WORKDIR /tmp/git/owt-docker/owt-server-4.3
 COPY owt-server-4.3/build/libdeps/*.bz2 ./build/libdeps/
 RUN ./scripts/installDepsUnattended.sh
